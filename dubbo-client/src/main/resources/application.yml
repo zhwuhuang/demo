@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: DUBBO-PROVIDER
+dubbo:
+  protocol:
+    name: dubbo
+    serialization: kryo
+    port: 20980
+  registry:
+    address: 127.0.0.1:8848 # 自己的nacos地址
+    check: false
+    group: noncore
+    version: 1.0
+    protocol: nacos
+    parameters:
+      namespace: dev
+  provider:
+    version: 1.0
+    group: noncore
+
